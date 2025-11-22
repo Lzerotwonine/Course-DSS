@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hệ thống hỗ trợ lựa chọn Khóa học Trực tuyến - AHP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f0f8ff, #e0f2fe);
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header, section {
+      padding: 60px 0;
+    }
+    header {
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .hero-img {
+      width: 100%;
+      max-width: 500px;
+      margin: 30px auto;
+      display: block;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    section p {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background-color: #e8f4fc;
+      padding: 10px;
+      border-left: 4px solid #007bff;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .methods {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      margin-top: 10px;
+      color: #007bff;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+      min-height: 50px;
+    }
+    .card button {
+      margin-top: 15px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .card button:hover {
+      background: #0056b3;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      animation: fadeIn 0.4s ease;
+    }
+    .modal-content h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    .modal-content p {
+      margin-bottom: 15px;
+    }
+    .modal-content .actions {
+      text-align: right;
+    }
+    .modal-content .actions a {
+      color: #007bff;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    .modal-content .actions button {
+      border: none;
+      background: transparent;
+      color: #555;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}  
+      to {opacity: 1; transform: translateY(0);}  
+    }
+    .comparison {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .comparison .box {
+      background-color: #f9fafb;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #007bff;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      .methods {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .navbar {
+      background: #004baf;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li a {
+      color: #fdfdfd;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .nav-links li a:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+    .nav-links li a.active {
+      background-color: rgb(37, 212, 235);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}" class="active">Chọn phương thức</a></li>
+      <li><a href="{{ url_for('manual') }}">Tính toán AHP thủ công</a></li>
+      <li><a href="{{ url_for('db_mode') }}">Tính toán AHP kết nối Database</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h1>Hệ thống hỗ trợ lựa chọn</h1>
+      <h1>Khóa học Trực tuyến với AHP</h1>
+      <p>Đưa ra quyết định thông minh và khoa học, chọn khóa học phù hợp nhất cho mục tiêu của bạn!</p>
+      <img src="static/img/unnamed.webp" alt="Decision Making" class="hero-img">
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>AHP là gì?</h2>
+      <p><strong>AHP (Analytic Hierarchy Process)</strong> – Phương pháp phân tích thứ bậc giúp ra quyết định bằng cách so sánh cặp giữa các tiêu chí một cách khoa học.</p>
+      <div class="highlight">
+        Áp dụng AHP để lựa chọn Khóa học sẽ giúp bạn cân nhắc các yếu tố như mức phí, thời lượng, đánh giá hay uy tín giảng viên một cách khách quan để tìm ra khóa học lý tưởng.
+      </div>
+      <p>Thay vì lựa chọn cảm tính, hệ thống AHP sẽ giúp bạn:</p>
+      
+        <li>Xác định các tiêu chuẩn quan trọng đối với bạn.</li>
+        <li>So sánh từng tiêu chí theo mức độ ưu tiên.</li>
+        <li>Phân tích và đưa ra kết quả dựa trên tính toán khoa học.</li>
+    </div>
+    
+    <div class="container">
+      <h2>Thomas L. Saaty - Người sáng lập AHP</h2>
+      <p>Phương pháp AHP được phát triển bởi Giáo sư Thomas L. Saaty tại Đại học Pittsburgh vào cuối những năm 1970. Ông đã đóng góp quan trọng trong lĩnh vực ra quyết định đa tiêu chí, biến các phân tích cảm tính thành các phép tính định lượng chặt chẽ.</p>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+    <img src="{{ url_for('static', filename='img/impact.png') }}" alt="Thomas L. Saaty" style="max-width: 500px; height: auto; border-radius: 8px;">
+    <p><em>Hình ảnh: Giáo sư Thomas L. Saaty đang nhận giải</em></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>So sánh phương pháp truyền thống và AHP</h2>
+      <div class="comparison">
+        <div class="box">
+          <h3>❌ Quyết định cảm tính</h3>
+          <p>Chọn theo xu hướng, quảng cáo, dẫn đến dễ bỏ lỡ các yếu tố quan trọng như thời lượng học hoặc chất lượng chứng chỉ.</p>
+        </div>
+        <div class="box">
+          <h3>✅ Phương pháp AHP</h3>
+          <p>So sánh theo tiêu chí cụ thể, tính điểm khách quan giúp bạn chọn được Khóa học tối ưu nhất.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Bắt đầu với phương pháp phù hợp</h2>
+      <p>Giờ bạn đã hiểu sơ lược về AHP, hãy chọn phương thức nhập liệu dưới đây để bắt đầu quá trình phân tích:</p>
+      <div class="methods">
+        <div class="card">
+          <h3>✍️ Nhập thủ công</h3>
+          <p>Bạn sẽ tự nhập tên các khóa học và tiêu chí để phân tích AHP.</p>
+          <button onclick="openModal('manualModal')">Giới thiệu</button>
+        </div>
+        <div class="card">
+          <h3>🗂️ Lấy từ CSDL</h3>
+          <p>Lựa chọn khóa học và tiêu chí sẵn có từ CSDL để phân tích.</p>
+          <button onclick="openModal('dbModal')">Giới thiệu</button>
+        </div>
+        <!-- Loại bỏ thẻ AI Mode -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="manualModal" class="modal">
+    <div class="modal-content">
+      <h3>✍️ Nhập thủ công</h3>
+      <p>Bạn sẽ nhập các tiêu chí, ma trận so sánh theo cặp để hệ thống tính toán và đưa ra kết quả xếp hạng Khóa học.</p>
+      <div class="actions">
+        <a href="/manual">Bắt đầu</a>
+        <button onclick="closeModal('manualModal')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="dbModal" class="modal">
+    <div class="modal-content">
+      <h3>🗂️ Lấy từ CSDL</h3>
+      <p>Lựa chọn từ các khóa học và tiêu chí đã lưu trữ trong CSDL để phân tích nhanh chóng & tiện lợi.</p>
+      <div class="actions">
+        <a href="/db">Chọn dữ liệu</a>
+        <button onclick="closeModal('dbModal')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loại bỏ aiModal -->
+
+  <footer>
+    <p>© 2025 Hệ thống hỗ trợ ra quyết định | Chọn khóa học thông minh hơn mỗi ngày!</p>
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+</body>
+</html>

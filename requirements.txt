@@ -1,0 +1,13 @@
+Flask
+Flask-Cors
+dotenv
+numpy
+pandas
+openpyxl
+matplotlib
+pymongo
+reportlab
+python-docx
+requests
+transformers
+scikit-learn

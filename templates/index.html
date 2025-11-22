@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AHP - Hỗ trợ Lựa chọn Khóa học Trực tuyến</title>
+
+  <!-- Font & Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Thư viện JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="/static/js/script.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Chọn phương thức</a></li>
+      <li><a href="{{ url_for('manual') }}" class="active" >Tính toán AHP thủ công</a></li>
+      <li><a href="{{ url_for('db_mode') }}">Tính toán AHP kết nối Database</a></li>
+      <!-- Loại bỏ AI-Mode -->
+    </ul>
+  </nav>
+
+
+  <!-- Nút Dark Mode -->
+  <button id="toggle-dark" onclick="toggleDarkMode()">🌙</button>
+
+  <!-- Tiêu đề -->
+  <div class="header-container">
+    <h2>Hệ thống hỗ trợ ra quyết định AHP – Chọn Khóa học</h2>
+    <p style="text-align:center; color:var(--text-light)">So sánh các lựa chọn khóa học trực tuyến một cách khoa học và khách quan</p>
+    <img src="static\img\decision-making.png" alt="decision" style="max-width: 250px; display:block; margin:auto;" />
+</div>
+
+<!-- Gợi ý tên khóa học -->
+<datalist id="alternativeOptions">
+  <option value="Google Data Analytics Professional Certificate">
+  <option value="The Complete Python Bootcamp: From Zero to Hero in Python">
+  <option value="CS50's Introduction to Computer Science">
+  <option value="Deep Learning Specialization">
+  <option value="Digital Marketing Specialization">
+</datalist>
+
+<!-- Gợi ý tiêu chí -->
+<datalist id="criteriaOptions">
+  <option value="Mức phí">
+  <option value="Thời lượng">
+  <option value="Đánh giá">
+  <option value="Uy tín giảng viên">
+  <option value="Chất lượng chứng chỉ">
+  <option value="Ngôn ngữ">
+  <option value="Tính ứng dụng thực tế">
+</datalist>
+
+  <!-- Vùng nhập số lượng -->
+  <div class="input-controls">
+    <div class="input-row">
+      <div class="input-group">
+        <label for="numAlternatives">Số phương án:</label>
+        <input type="number" id="numAlternatives" min="2" max="10" value="3" />
+        <div class="error-message" id="alternativeError"></div>
+      </div>
+      <div class="input-group">
+        <label for="numCriteria">Số tiêu chí:</label>
+        <input type="number" id="numCriteria" min="2" max="10" value="3" />
+        <div class="error-message" id="criteriaError"></div>
+      </div>
+      <button class="btn-primary" onclick="generateInputs()">
+        <i class="fas fa-arrow-right"></i> Tiếp tục
+      </button>
+    </div>
+  </div>
+
+  <!-- Nhập tên phương án và tiêu chí -->
+  <div id="namesContainer"></div>
+
+  <!-- Nhập ma trận -->
+  <div class="action-center">
+    <button id="createMatrixBtn" class="btn-primary" onclick="generateEvaluationMatrix()" style="display:none;">
+      <i class="fas fa-th"></i> Nhập ma trận đánh giá
+    </button>
+  </div>
+
+  <div id="criteriaMatrixContainer"></div>
+
+  <!-- Kiểm tra CR tiêu chí -->
+  <div id="crCheckBtnContainer" class="action-center" style="display:none;">
+    <button class="btn-primary" onclick="checkCriteriaCR()">📏 Kiểm tra CR tiêu chí</button>
+  </div>
+  <div id="crCheckResult"></div>
+
+  <div id="alternativeMatricesContainer"></div>
+
+  <!-- Kiểm tra CR phương án -->
+  <div id="altCRCheckBtnContainer" class="action-center" style="display:none;">
+    <button class="btn-primary" onclick="checkAlternativeCR()">📏 Kiểm tra CR phương án</button>
+  </div>
+  <div id="altCrCheckResult"></div>
+
+  <!-- Tính toán AHP -->
+  <div class="action-center">
+    <button class="btn-primary" onclick="calculateAHP()" id="calcBtn" style="display:none;">
+      <i class="fas fa-calculator"></i> Tính toán AHP
+    </button>
+  </div>
+
+  <!-- Kết quả -->
+  <div id="result"></div>
+
+  <!-- Xuất file -->
+  <div class="action-center">
+    <button id="exportExcelBtn" class="btn-primary" style="display:none;" onclick="downloadExcelBackend()">
+      📊 Xuất Excel
+    </button>
+    <button id="btnPDF" class="btn-primary" style="display:none;" onclick="exportServerPDF()">
+      📄 Xuất PDF
+    </button>
+  </div>
+
+</body>
+</html>

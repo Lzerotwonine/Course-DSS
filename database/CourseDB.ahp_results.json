@@ -1,0 +1,1738 @@
+[{
+  "_id": {
+    "$oid": "69210bd4f5fe166ae7d44a3d"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:03:16.779Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      3,
+      2
+    ],
+    [
+      0.33,
+      1,
+      1
+    ],
+    [
+      0.5,
+      1,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.5502282246455104,
+    0.20937560587659348,
+    0.2403961694778961
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.5464480874316939,
+      0.6,
+      0.5
+    ],
+    [
+      0.18032786885245902,
+      0.2,
+      0.25
+    ],
+    [
+      0.27322404371584696,
+      0.2,
+      0.25
+    ]
+  ],
+  "lambda_max_criteria": 3.015380358395841,
+  "CI_criteria": 0.007690179197920477,
+  "CR_criteria": 0.01325892965158703,
+  "alternative_names": [
+    "Introduction to HTML, CSS, JavaScript",
+    "AWS Certified Solutions Architect",
+    "Excel từ A đến Z: Trọn bộ 3 khóa học Excel"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        0.5,
+        0.25
+      ],
+      [
+        2,
+        1,
+        0.3
+      ],
+      [
+        4,
+        3.333,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        0.5,
+        1,
+        4
+      ],
+      [
+        0.25,
+        0.25,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        1,
+        0.7
+      ],
+      [
+        1,
+        1,
+        0.5
+      ],
+      [
+        1.429,
+        2,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.0290242451676064,
+    "thoi_luong": 3.053621575878972,
+    "danh_gia": 3.0126818651900824
+  },
+  "CR_alternatives": {
+    "gia": 0.025020901006557225,
+    "thoi_luong": 0.04622549644738984,
+    "danh_gia": 0.010932642405243456
+  },
+  "alternative_weights": {
+    "gia": [
+      0.13460355421121298,
+      0.22705905413234756,
+      0.6383373916564394
+    ],
+    "thoi_luong": [
+      0.5469305649362727,
+      0.3445446657970521,
+      0.10852476926667504
+    ],
+    "danh_gia": [
+      0.2863556556464587,
+      0.25597264688921284,
+      0.4576716974643285
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Excel từ A đến Z: Trọn bộ 3 khóa học Excel",
+      "score": 0.48397621200266716
+    },
+    {
+      "alternative": "AWS Certified Solutions Architect",
+      "score": 0.2586083922010215
+    },
+    {
+      "alternative": "Introduction to HTML, CSS, JavaScript",
+      "score": 0.25741539579631123
+    }
+  ],
+  "final_scores_image": "/static/final_scores_62c8175d.png",
+  "criteria_weights_image": "/static/criteria_weights_62c8175d.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_62c8175d.png",
+  "final_scores_pie_image": "/static/final_scores_pie_62c8175d.png"
+},
+{
+  "_id": {
+    "$oid": "69210c85f5fe166ae7d44a3e"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:06:13.346Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      1,
+      5
+    ],
+    [
+      1,
+      1,
+      3
+    ],
+    [
+      0.2,
+      0.33,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.48075515342338454,
+    0.405661057304025,
+    0.11358378927259045
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.45454545454545453,
+      0.4291845493562232,
+      0.5555555555555556
+    ],
+    [
+      0.45454545454545453,
+      0.4291845493562232,
+      0.3333333333333333
+    ],
+    [
+      0.09090909090909091,
+      0.14163090128755365,
+      0.1111111111111111
+    ]
+  ],
+  "lambda_max_criteria": 3.025105704503141,
+  "CI_criteria": 0.012552852251570545,
+  "CR_criteria": 0.02164284870960439,
+  "alternative_names": [
+    "Cơ bản về Thiết kế Đồ họa (Graphic Design Fundamentals)",
+    "Professional Scrum Master (PSM I) Training",
+    "Digital Marketing Specialization"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        0.8,
+        0.5
+      ],
+      [
+        1.25,
+        1,
+        0.3
+      ],
+      [
+        2,
+        3.333,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        0.3,
+        0.2
+      ],
+      [
+        3.333,
+        1,
+        0.25
+      ],
+      [
+        5,
+        4,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        0.333,
+        1,
+        1
+      ],
+      [
+        0.5,
+        1,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.060113342096581,
+    "thoi_luong": 3.1078011089094146,
+    "danh_gia": 3.0180034896966794
+  },
+  "CR_alternatives": {
+    "gia": 0.05182184663498375,
+    "thoi_luong": 0.09293199043915056,
+    "danh_gia": 0.015520249738516742
+  },
+  "alternative_weights": {
+    "gia": [
+      0.22060481003731627,
+      0.2159110583573821,
+      0.5634841316053016
+    ],
+    "thoi_luong": [
+      0.09673811375056901,
+      0.23252326187368302,
+      0.6707386243757479
+    ],
+    "danh_gia": [
+      0.5499738360101619,
+      0.20979679233070012,
+      0.24022937165913802
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Digital Marketing Specialization",
+      "score": 0.570276602008081
+    },
+    {
+      "alternative": "Professional Scrum Master (PSM I) Training",
+      "score": 0.22195550089602317
+    },
+    {
+      "alternative": "Cơ bản về Thiết kế Đồ họa (Graphic Design Fundamentals)",
+      "score": 0.20776789709589588
+    }
+  ],
+  "final_scores_image": "/static/final_scores_05411d15.png",
+  "criteria_weights_image": "/static/criteria_weights_05411d15.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_05411d15.png",
+  "final_scores_pie_image": "/static/final_scores_pie_05411d15.png"
+},
+{
+  "_id": {
+    "$oid": "69210cf4f5fe166ae7d44a3f"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:08:04.935Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      1,
+      4
+    ],
+    [
+      1,
+      1,
+      2
+    ],
+    [
+      0.25,
+      0.5,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.4742301468641679,
+    0.37639671700360655,
+    0.1493731361322255
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.4444444444444444,
+      0.4,
+      0.5714285714285714
+    ],
+    [
+      0.4444444444444444,
+      0.4,
+      0.2857142857142857
+    ],
+    [
+      0.1111111111111111,
+      0.2,
+      0.14285714285714285
+    ]
+  ],
+  "lambda_max_criteria": 3.053621575878972,
+  "CI_criteria": 0.026810787939486103,
+  "CR_criteria": 0.04622549644738984,
+  "alternative_names": [
+    "Photography Masterclass: A Complete Guide to Photography",
+    "Kỹ năng mềm cho người đi làm",
+    "Deep Learning Specialization"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0.5,
+        1,
+        1
+      ],
+      [
+        0.333,
+        1,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        0.25,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        3,
+        5
+      ],
+      [
+        0.333,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.0180034896966794,
+    "thoi_luong": 3.024595068623494,
+    "danh_gia": 3.0033808886685844
+  },
+  "CR_alternatives": {
+    "gia": 0.015520249738516742,
+    "thoi_luong": 0.02120264536508116,
+    "danh_gia": 0.0029145591970555487
+  },
+  "alternative_weights": {
+    "gia": [
+      0.5499738360101618,
+      0.24022937165913819,
+      0.20979679233070003
+    ],
+    "thoi_luong": [
+      0.683340461621599,
+      0.19980996310201243,
+      0.11684957527638853
+    ],
+    "danh_gia": [
+      0.6483736382961813,
+      0.22959622642000313,
+      0.12203013528381555
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Photography Masterclass: A Complete Guide to Photography",
+      "score": 0.6148708831104096
+    },
+    {
+      "alternative": "Kỹ năng mềm cho người đi làm",
+      "score": 0.2234273327236895
+    },
+    {
+      "alternative": "Deep Learning Specialization",
+      "score": 0.16170178416590092
+    }
+  ],
+  "final_scores_image": "/static/final_scores_837c9bc5.png",
+  "criteria_weights_image": "/static/criteria_weights_837c9bc5.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_837c9bc5.png",
+  "final_scores_pie_image": "/static/final_scores_pie_837c9bc5.png"
+},
+{
+  "_id": {
+    "$oid": "69210d74f5fe166ae7d44a40"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:10:12.318Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0.5,
+      1,
+      1
+    ],
+    [
+      0.33,
+      1,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.5502282246455104,
+    0.2403961694778962,
+    0.20937560587659357
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.5464480874316939,
+      0.5,
+      0.6
+    ],
+    [
+      0.27322404371584696,
+      0.25,
+      0.2
+    ],
+    [
+      0.18032786885245902,
+      0.25,
+      0.2
+    ]
+  ],
+  "lambda_max_criteria": 3.015380358395839,
+  "CI_criteria": 0.007690179197919589,
+  "CR_criteria": 0.013258929651585498,
+  "alternative_names": [
+    "Google Data Analytics Professional Certificate",
+    "The Complete Python Bootcamp: From Zero to Hero",
+    "Digital Marketing Specialization"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        0.25,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        5,
+        4
+      ],
+      [
+        0.2,
+        1,
+        2
+      ],
+      [
+        0.25,
+        0.5,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        0.25,
+        1,
+        1
+      ],
+      [
+        0.5,
+        1,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.024595068623494,
+    "thoi_luong": 3.094015108025529,
+    "danh_gia": 3.053621575878972
+  },
+  "CR_alternatives": {
+    "gia": 0.02120264536508116,
+    "thoi_luong": 0.08104750691855962,
+    "danh_gia": 0.04622549644738984
+  },
+  "alternative_weights": {
+    "gia": [
+      0.683340461621599,
+      0.19980996310201243,
+      0.11684957527638853
+    ],
+    "thoi_luong": [
+      0.6869814705720219,
+      0.18647546059949704,
+      0.12654306882848113
+    ],
+    "danh_gia": [
+      0.5841699777657093,
+      0.18400201292590915,
+      0.23182800930838152
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Google Data Analytics Professional Certificate",
+      "score": 0.6634518660839136
+    },
+    {
+      "alternative": "The Complete Python Bootcamp: From Zero to Hero",
+      "score": 0.19329460063272572
+    },
+    {
+      "alternative": "Digital Marketing Specialization",
+      "score": 0.14325353328336077
+    }
+  ],
+  "final_scores_image": "/static/final_scores_3a578468.png",
+  "criteria_weights_image": "/static/criteria_weights_3a578468.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_3a578468.png",
+  "final_scores_pie_image": "/static/final_scores_pie_3a578468.png"
+},
+{
+  "_id": {
+    "$oid": "69210dd3f5fe166ae7d44a41"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:11:47.740Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      4,
+      3
+    ],
+    [
+      0.25,
+      1,
+      2
+    ],
+    [
+      0.33,
+      0.5,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.6306699430406333,
+    0.2184451261190221,
+    0.15088493084034457
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.6329113924050632,
+      0.7272727272727273,
+      0.5
+    ],
+    [
+      0.1582278481012658,
+      0.18181818181818182,
+      0.3333333333333333
+    ],
+    [
+      0.2088607594936709,
+      0.09090909090909091,
+      0.16666666666666666
+    ]
+  ],
+  "lambda_max_criteria": 3.103216288700887,
+  "CI_criteria": 0.051608144350443474,
+  "CR_criteria": 0.08897955922490255,
+  "alternative_names": [
+    "The Complete Python Bootcamp: From Zero to Hero",
+    "Digital Marketing Specialization",
+    "Cơ bản về Thiết kế Đồ họa (Graphic Design Fundamentals)"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        6,
+        5
+      ],
+      [
+        0.167,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        0.333,
+        1,
+        1
+      ],
+      [
+        0.5,
+        1,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        0.5,
+        0.333,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.086264569856732,
+    "thoi_luong": 3.0180034896966794,
+    "danh_gia": 3.018003489696682
+  },
+  "CR_alternatives": {
+    "gia": 0.0743660084971827,
+    "thoi_luong": 0.015520249738516742,
+    "danh_gia": 0.01552024973851904
+  },
+  "alternative_weights": {
+    "gia": [
+      0.7285415738083109,
+      0.16263834214549355,
+      0.10882008404619561
+    ],
+    "thoi_luong": [
+      0.5499738360101619,
+      0.20979679233070012,
+      0.24022937165913802
+    ],
+    "danh_gia": [
+      0.387395069248791,
+      0.44344525986707184,
+      0.16915967088413708
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "The Complete Python Bootcamp: From Zero to Hero",
+      "score": 0.6380604550573172
+    },
+    {
+      "alternative": "Digital Marketing Specialization",
+      "score": 0.2153094081036893
+    },
+    {
+      "alternative": "Cơ bản về Thiết kế Đồ họa (Graphic Design Fundamentals)",
+      "score": 0.14663013683899342
+    }
+  ],
+  "final_scores_image": "/static/final_scores_0a355f7a.png",
+  "criteria_weights_image": "/static/criteria_weights_0a355f7a.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_0a355f7a.png",
+  "final_scores_pie_image": "/static/final_scores_pie_0a355f7a.png"
+},
+{
+  "_id": {
+    "$oid": "69210e26f5fe166ae7d44a42"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:13:10.157Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      6,
+      5
+    ],
+    [
+      0.17,
+      1,
+      2
+    ],
+    [
+      0.2,
+      0.5,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.7281562537184358,
+    0.16316704847812596,
+    0.10867669780343828
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.7299270072992702,
+      0.8,
+      0.625
+    ],
+    [
+      0.12408759124087593,
+      0.13333333333333333,
+      0.25
+    ],
+    [
+      0.14598540145985403,
+      0.06666666666666667,
+      0.125
+    ]
+  ],
+  "lambda_max_criteria": 3.09074051360771,
+  "CI_criteria": 0.04537025680385498,
+  "CR_criteria": 0.0782245806963017,
+  "alternative_names": [
+    "Cơ bản về Thiết kế Đồ họa (Graphic Design Fundamentals)",
+    "Introduction to HTML, CSS, JavaScript",
+    "Machine Learning by Andrew Ng"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        4,
+        3
+      ],
+      [
+        0.25,
+        1,
+        1
+      ],
+      [
+        0.333,
+        1,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        0.333,
+        1,
+        1
+      ],
+      [
+        0.5,
+        1,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        0.5,
+        0.333,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.008835783113171,
+    "thoi_luong": 3.0180034896966794,
+    "danh_gia": 3.018003489696682
+  },
+  "CR_alternatives": {
+    "gia": 0.007617054407906143,
+    "thoi_luong": 0.015520249738516742,
+    "danh_gia": 0.01552024973851904
+  },
+  "alternative_weights": {
+    "gia": [
+      0.633756191320301,
+      0.17438068885464286,
+      0.19186311982505602
+    ],
+    "thoi_luong": [
+      0.5499738360101619,
+      0.20979679233070012,
+      0.24022937165913802
+    ],
+    "danh_gia": [
+      0.387395069248791,
+      0.44344525986707184,
+      0.16915967088413708
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Cơ bản về Thiết kế Đồ họa (Graphic Design Fundamentals)",
+      "score": 0.5933119584759186
+    },
+    {
+      "alternative": "Introduction to HTML, CSS, JavaScript",
+      "score": 0.20940047900095654
+    },
+    {
+      "alternative": "Machine Learning by Andrew Ng",
+      "score": 0.1972875625231249
+    }
+  ],
+  "final_scores_image": "/static/final_scores_143eedb6.png",
+  "criteria_weights_image": "/static/criteria_weights_143eedb6.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_143eedb6.png",
+  "final_scores_pie_image": "/static/final_scores_pie_143eedb6.png"
+},
+{
+  "_id": {
+    "$oid": "69210f4df5fe166ae7d44a43"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:18:05.476Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      3,
+      2
+    ],
+    [
+      0.33,
+      1,
+      1
+    ],
+    [
+      0.5,
+      1,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.5502282246455104,
+    0.20937560587659348,
+    0.2403961694778961
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.5464480874316939,
+      0.6,
+      0.5
+    ],
+    [
+      0.18032786885245902,
+      0.2,
+      0.25
+    ],
+    [
+      0.27322404371584696,
+      0.2,
+      0.25
+    ]
+  ],
+  "lambda_max_criteria": 3.015380358395841,
+  "CI_criteria": 0.007690179197920477,
+  "CR_criteria": 0.01325892965158703,
+  "alternative_names": [
+    "Introduction to HTML, CSS, JavaScript",
+    "Machine Learning by Andrew Ng",
+    "Excel từ A đến Z: Trọn bộ 3 khóa học Excel"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        5,
+        4
+      ],
+      [
+        0.2,
+        1,
+        2
+      ],
+      [
+        0.25,
+        0.5,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        6,
+        5
+      ],
+      [
+        0.167,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        0.5,
+        0.333,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.094015108025529,
+    "thoi_luong": 3.086264569856732,
+    "danh_gia": 3.018003489696682
+  },
+  "CR_alternatives": {
+    "gia": 0.08104750691855962,
+    "thoi_luong": 0.0743660084971827,
+    "danh_gia": 0.01552024973851904
+  },
+  "alternative_weights": {
+    "gia": [
+      0.6869814705720219,
+      0.18647546059949704,
+      0.12654306882848113
+    ],
+    "thoi_luong": [
+      0.7285415738083109,
+      0.16263834214549355,
+      0.10882008404619561
+    ],
+    "danh_gia": [
+      0.387395069248791,
+      0.44344525986707184,
+      0.16915967088413708
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Introduction to HTML, CSS, JavaScript",
+      "score": 0.6236637190616412
+    },
+    {
+      "alternative": "Machine Learning by Andrew Ng",
+      "score": 0.2432591048962668
+    },
+    {
+      "alternative": "Excel từ A đến Z: Trọn bộ 3 khóa học Excel",
+      "score": 0.13307717604209196
+    }
+  ],
+  "final_scores_image": "/static/final_scores_32f79c7a.png",
+  "criteria_weights_image": "/static/criteria_weights_32f79c7a.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_32f79c7a.png",
+  "final_scores_pie_image": "/static/final_scores_pie_32f79c7a.png"
+},
+{
+  "_id": {
+    "$oid": "69210f74f5fe166ae7d44a44"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:18:44.809Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      1,
+      3
+    ],
+    [
+      0.5,
+      0.33,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.38761191850355853,
+    0.44359071576068365,
+    0.1687973657357579
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.4,
+      0.4291845493562232,
+      0.3333333333333333
+    ],
+    [
+      0.4,
+      0.4291845493562232,
+      0.5
+    ],
+    [
+      0.2,
+      0.14163090128755365,
+      0.16666666666666666
+    ]
+  ],
+  "lambda_max_criteria": 3.0153803583958347,
+  "CI_criteria": 0.007690179197917368,
+  "CR_criteria": 0.01325892965158167,
+  "alternative_names": [
+    "Machine Learning by Andrew Ng",
+    "Excel từ A đến Z: Trọn bộ 3 khóa học Excel",
+    "Introduction to Cloud Computing"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        0.333,
+        1,
+        1
+      ],
+      [
+        0.5,
+        1,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        0.25,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        6,
+        5
+      ],
+      [
+        0.167,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.0180034896966794,
+    "thoi_luong": 3.024595068623494,
+    "danh_gia": 3.086264569856732
+  },
+  "CR_alternatives": {
+    "gia": 0.015520249738516742,
+    "thoi_luong": 0.02120264536508116,
+    "danh_gia": 0.0743660084971827
+  },
+  "alternative_weights": {
+    "gia": [
+      0.5499738360101619,
+      0.20979679233070012,
+      0.24022937165913802
+    ],
+    "thoi_luong": [
+      0.683340461621599,
+      0.19980996310201243,
+      0.11684957527638853
+    ],
+    "danh_gia": [
+      0.7285415738083109,
+      0.16263834214549355,
+      0.10882008404619561
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Machine Learning by Andrew Ng",
+      "score": 0.6392757966694476
+    },
+    {
+      "alternative": "Excel từ A đến Z: Trọn bộ 3 khóa học Excel",
+      "score": 0.197406505441523
+    },
+    {
+      "alternative": "Introduction to Cloud Computing",
+      "score": 0.16331769788902956
+    }
+  ],
+  "final_scores_image": "/static/final_scores_77a10a70.png",
+  "criteria_weights_image": "/static/criteria_weights_77a10a70.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_77a10a70.png",
+  "final_scores_pie_image": "/static/final_scores_pie_77a10a70.png"
+},
+{
+  "_id": {
+    "$oid": "69210fa9f5fe166ae7d44a45"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:19:37.217Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      3,
+      2
+    ],
+    [
+      0.33,
+      1,
+      1
+    ],
+    [
+      0.5,
+      1,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.5502282246455104,
+    0.20937560587659348,
+    0.2403961694778961
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.5464480874316939,
+      0.6,
+      0.5
+    ],
+    [
+      0.18032786885245902,
+      0.2,
+      0.25
+    ],
+    [
+      0.27322404371584696,
+      0.2,
+      0.25
+    ]
+  ],
+  "lambda_max_criteria": 3.015380358395841,
+  "CI_criteria": 0.007690179197920477,
+  "CR_criteria": 0.01325892965158703,
+  "alternative_names": [
+    "Introduction to Cloud Computing",
+    "Full",
+    "Học tiếng Trung giao tiếp cơ bản"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        0.5,
+        0.333,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        0.333,
+        1,
+        2
+      ],
+      [
+        0.25,
+        0.5,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        6,
+        5
+      ],
+      [
+        0.167,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.018003489696682,
+    "thoi_luong": 3.0180034896966794,
+    "danh_gia": 3.086264569856732
+  },
+  "CR_alternatives": {
+    "gia": 0.01552024973851904,
+    "thoi_luong": 0.015520249738516742,
+    "danh_gia": 0.0743660084971827
+  },
+  "alternative_weights": {
+    "gia": [
+      0.387395069248791,
+      0.44344525986707184,
+      0.16915967088413708
+    ],
+    "thoi_luong": [
+      0.6250517279387546,
+      0.23843652002363472,
+      0.13651175203761062
+    ],
+    "danh_gia": [
+      0.7285415738083109,
+      0.16263834214549355,
+      0.10882008404619561
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Introduction to Cloud Computing",
+      "score": 0.5191648890794911
+    },
+    {
+      "alternative": "Full",
+      "score": 0.3330165233691931
+    },
+    {
+      "alternative": "Học tiếng Trung giao tiếp cơ bản",
+      "score": 0.14781858755131574
+    }
+  ],
+  "final_scores_image": "/static/final_scores_9acf5918.png",
+  "criteria_weights_image": "/static/criteria_weights_9acf5918.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_9acf5918.png",
+  "final_scores_pie_image": "/static/final_scores_pie_9acf5918.png"
+},
+{
+  "_id": {
+    "$oid": "69210fe7f5fe166ae7d44a46"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:20:39.872Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      0.5,
+      1,
+      3
+    ],
+    [
+      0.25,
+      0.33,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.5586748187080586,
+    0.3196792344065947,
+    0.12164594688534668
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.5714285714285714,
+      0.6006006006006006,
+      0.5
+    ],
+    [
+      0.2857142857142857,
+      0.3003003003003003,
+      0.375
+    ],
+    [
+      0.14285714285714285,
+      0.0990990990990991,
+      0.125
+    ]
+  ],
+  "lambda_max_criteria": 3.0153803583958347,
+  "CI_criteria": 0.007690179197917368,
+  "CR_criteria": 0.01325892965158167,
+  "alternative_names": [
+    "Full",
+    "Học tiếng Trung giao tiếp cơ bản",
+    "Professional Scrum Master (PSM I) Training"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        0.5,
+        0.333,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        0.333,
+        1,
+        1
+      ],
+      [
+        0.5,
+        1,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        0.25,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.018003489696682,
+    "thoi_luong": 3.0180034896966794,
+    "danh_gia": 3.024595068623494
+  },
+  "CR_alternatives": {
+    "gia": 0.01552024973851904,
+    "thoi_luong": 0.015520249738516742,
+    "danh_gia": 0.02120264536508116
+  },
+  "alternative_weights": {
+    "gia": [
+      0.387395069248791,
+      0.44344525986707184,
+      0.16915967088413708
+    ],
+    "thoi_luong": [
+      0.5499738360101619,
+      0.20979679233070012,
+      0.24022937165913802
+    ],
+    "danh_gia": [
+      0.683340461621599,
+      0.19980996310201243,
+      0.11684957527638853
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Full",
+      "score": 0.4753686824193801
+    },
+    {
+      "alternative": "Học tiếng Trung giao tiếp cơ bản",
+      "score": 0.3391154502750923
+    },
+    {
+      "alternative": "Professional Scrum Master (PSM I) Training",
+      "score": 0.18551586730552752
+    }
+  ],
+  "final_scores_image": "/static/final_scores_9e737785.png",
+  "criteria_weights_image": "/static/criteria_weights_9e737785.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_9e737785.png",
+  "final_scores_pie_image": "/static/final_scores_pie_9e737785.png"
+},
+{
+  "_id": {
+    "$oid": "69211036f5fe166ae7d44a47"
+  },
+  "timestamp": {
+    "$date": "2025-11-22T08:21:58.133Z"
+  },
+  "criteria_names": [
+    "gia",
+    "thoi_luong",
+    "danh_gia"
+  ],
+  "criteria_matrix": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0.5,
+      1,
+      1
+    ],
+    [
+      0.33,
+      1,
+      1
+    ]
+  ],
+  "criteria_weights": [
+    0.5502282246455104,
+    0.2403961694778962,
+    0.20937560587659357
+  ],
+  "normalized_criteria_matrix": [
+    [
+      0.5464480874316939,
+      0.5,
+      0.6
+    ],
+    [
+      0.27322404371584696,
+      0.25,
+      0.2
+    ],
+    [
+      0.18032786885245902,
+      0.25,
+      0.2
+    ]
+  ],
+  "lambda_max_criteria": 3.015380358395839,
+  "CI_criteria": 0.007690179197919589,
+  "CR_criteria": 0.013258929651585498,
+  "alternative_names": [
+    "Học tiếng Trung giao tiếp cơ bản",
+    "Professional Scrum Master (PSM I) Training",
+    "Financial Markets (Yale University)"
+  ],
+  "alternative_matrices": {
+    "gia": [
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        0.25,
+        1,
+        1
+      ],
+      [
+        0.2,
+        1,
+        1
+      ]
+    ],
+    "thoi_luong": [
+      [
+        1,
+        6,
+        5
+      ],
+      [
+        0.167,
+        1,
+        2
+      ],
+      [
+        0.2,
+        0.5,
+        1
+      ]
+    ],
+    "danh_gia": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        0.333,
+        1,
+        1
+      ],
+      [
+        0.5,
+        1,
+        1
+      ]
+    ]
+  },
+  "alternative_lambda_max": {
+    "gia": 3.0055351117384976,
+    "thoi_luong": 3.086264569856732,
+    "danh_gia": 3.0180034896966794
+  },
+  "CR_alternatives": {
+    "gia": 0.004771648050428995,
+    "thoi_luong": 0.0743660084971827,
+    "danh_gia": 0.015520249738516742
+  },
+  "alternative_weights": {
+    "gia": [
+      0.6908353523244671,
+      0.16032868286070978,
+      0.14883596481482306
+    ],
+    "thoi_luong": [
+      0.7285415738083109,
+      0.16263834214549355,
+      0.10882008404619561
+    ],
+    "danh_gia": [
+      0.5499738360101619,
+      0.20979679233070012,
+      0.24022937165913802
+    ]
+  },
+  "final_scores": [
+    {
+      "alternative": "Học tiếng Trung giao tiếp cơ bản",
+      "score": 0.6704068182116651
+    },
+    {
+      "alternative": "Professional Scrum Master (PSM I) Training",
+      "score": 0.17124133149741977
+    },
+    {
+      "alternative": "Financial Markets (Yale University)",
+      "score": 0.15835185029091528
+    }
+  ],
+  "final_scores_image": "/static/final_scores_3c792dcd.png",
+  "criteria_weights_image": "/static/criteria_weights_3c792dcd.png",
+  "criteria_weights_pie_image": "/static/criteria_weights_pie_3c792dcd.png",
+  "final_scores_pie_image": "/static/final_scores_pie_3c792dcd.png"
+}]

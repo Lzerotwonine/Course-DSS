@@ -1,0 +1,301 @@
+[{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a01"
+  },
+  "ten_khoa": "Google Data Analytics Professional Certificate",
+  "nen_tang": "Coursera",
+  "mo_ta_ngan": "Khóa học phân tích dữ liệu chuyên nghiệp từ Google.",
+  "gia": 490000,
+  "thoi_luong": 240,
+  "danh_gia": 4.8,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course1.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a02"
+  },
+  "ten_khoa": "The Complete Python Bootcamp: From Zero to Hero",
+  "nen_tang": "Udemy",
+  "mo_ta_ngan": "Học Python từ cơ bản đến nâng cao, bao gồm cả khoa học dữ liệu và Web.",
+  "gia": 199000,
+  "thoi_luong": 22,
+  "danh_gia": 4.6,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Tổng hợp",
+  "currency_unit": "19.99 USD",
+  "image_url": "/static/img/course2.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a03"
+  },
+  "ten_khoa": "CS50's Introduction to Computer Science",
+  "nen_tang": "edX",
+  "mo_ta_ngan": "Khóa học nhập môn Khoa học Máy tính nổi tiếng của Đại học Harvard.",
+  "gia": 0,
+  "thoi_luong": 160,
+  "danh_gia": 4.9,
+  "chung_chi": false,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course3.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a04"
+  },
+  "ten_khoa": "Digital Marketing Specialization",
+  "nen_tang": "Coursera",
+  "mo_ta_ngan": "Khóa học chuyên sâu về tiếp thị kỹ thuật số từ UIUC.",
+  "gia": 790000,
+  "thoi_luong": 200,
+  "danh_gia": 4.7,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Trung cấp",
+  "image_url": "/static/img/course4.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a05"
+  },
+  "ten_khoa": "Cơ bản về Thiết kế Đồ họa (Graphic Design Fundamentals)",
+  "nen_tang": "Kyna",
+  "mo_ta_ngan": "Khóa học nhập môn thiết kế đồ họa bằng tiếng Việt.",
+  "gia": 599000,
+  "thoi_luong": 10,
+  "danh_gia": 4.5,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Việt",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course5.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a06"
+  },
+  "ten_khoa": "Introduction to HTML, CSS, JavaScript",
+  "nen_tang": "Coursera",
+  "mo_ta_ngan": "Xây dựng website cơ bản với các ngôn ngữ chính.",
+  "gia": 0,
+  "thoi_luong": 40,
+  "danh_gia": 4.4,
+  "chung_chi": false,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course6.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a07"
+  },
+  "ten_khoa": "Machine Learning by Andrew Ng",
+  "nen_tang": "Coursera",
+  "mo_ta_ngan": "Khóa học Machine Learning kinh điển.",
+  "gia": 0,
+  "thoi_luong": 60,
+  "danh_gia": 4.9,
+  "chung chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Trung cấp",
+  "image_url": "/static/img/course7.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a08"
+  },
+  "ten_khoa": "Excel từ A đến Z: Trọn bộ 3 khóa học Excel",
+  "nen_tang": "Unica",
+  "mo_ta_ngan": "Khóa học đầy đủ về Microsoft Excel, từ cơ bản đến nâng cao.",
+  "gia": 499000,
+  "thoi_luong": 15,
+  "danh_gia": 4.7,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Việt",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course8.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a09"
+  },
+  "ten_khoa": "Introduction to Cloud Computing",
+  "nen_tang": "edX",
+  "mo_ta_ngan": "Nhập môn về các dịch vụ điện toán đám mây (Cloud Computing).",
+  "gia": 0,
+  "thoi_luong": 30,
+  "danh_gia": 4.3,
+  "chung_chi": false,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course9.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a0a"
+  },
+  "ten_khoa": "Full-Stack Web Development Bootcamp",
+  "nen_tang": "Udemy",
+  "mo_ta_ngan": "Xây dựng ứng dụng web hoàn chỉnh với các công nghệ hiện đại.",
+  "gia": 349000,
+  "thoi_luong": 60,
+  "danh_gia": 4.5,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Nâng cao",
+  "image_url": "/static/img/course10.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a0b"
+  },
+  "ten_khoa": "Học tiếng Trung giao tiếp cơ bản",
+  "nen_tang": "Edumall",
+  "mo_ta_ngan": "Dành cho người mới bắt đầu học tiếng Trung Quốc.",
+  "gia": 750000,
+  "thoi_luong": 8,
+  "danh_gia": 4.2,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Việt",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course11.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a0c"
+  },
+  "ten_khoa": "Professional Scrum Master (PSM I) Training",
+  "nen_tang": "Khác",
+  "mo_ta_ngan": "Chuẩn bị cho kỳ thi Scrum Master chính thức.",
+  "gia": 12000000,
+  "thoi_luong": 16,
+  "danh_gia": 4.8,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Trung cấp",
+  "image_url": "/static/img/course12.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a0d"
+  },
+  "ten_khoa": "Financial Markets (Yale University)",
+  "nen_tang": "Coursera",
+  "mo_ta_ngan": "Khóa học giới thiệu về tài chính và thị trường vốn.",
+  "gia": 0,
+  "thoi_luong": 32,
+  "danh_gia": 4.6,
+  "chung_chi": false,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course13.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a0e"
+  },
+  "ten_khoa": "Lập trình C++ cơ bản và nâng cao",
+  "nen_tang": "VietJack",
+  "mo_ta_ngan": "Khóa học C++ toàn diện bằng tiếng Việt.",
+  "gia": 0,
+  "thoi_luong": 50,
+  "danh_gia": 4.1,
+  "chung_chi": false,
+  "ngon_ngu": "Tiếng Việt",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course14.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a0f"
+  },
+  "ten_khoa": "AWS Certified Solutions Architect - Associate",
+  "nen_tang": "Udemy",
+  "mo_ta_ngan": "Chuẩn bị cho kỳ thi chứng chỉ AWS SAA-C03.",
+  "gia": 299000,
+  "thoi_luong": 40,
+  "danh_gia": 4.7,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Trung cấp",
+  "image_url": "/static/img/course15.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a10"
+  },
+  "ten_khoa": "Quản lý dự án chuyên nghiệp PMP",
+  "nen_tang": "Atoha",
+  "mo_ta_ngan": "Đào tạo và ôn thi chứng chỉ Quản lý Dự án PMP.",
+  "gia": 8500000,
+  "thoi_luong": 40,
+  "danh_gia": 4.9,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Việt",
+  "do_kho": "Nâng cao",
+  "image_url": "/static/img/course16.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a11"
+  },
+  "ten_khoa": "Photography Masterclass: A Complete Guide to Photography",
+  "nen_tang": "Udemy",
+  "mo_ta_ngan": "Khóa học nhiếp ảnh toàn diện.",
+  "gia": 199000,
+  "thoi_luong": 20,
+  "danh_gia": 4.5,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Tổng hợp",
+  "image_url": "/static/img/course17.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a12"
+  },
+  "ten_khoa": "Kỹ năng mềm cho người đi làm",
+  "nen_tang": "Edumall",
+  "mo_ta_ngan": "Cải thiện giao tiếp, thuyết trình và làm việc nhóm.",
+  "gia": 350000,
+  "thoi_luong": 5,
+  "danh_gia": 4,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Việt",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course18.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a13"
+  },
+  "ten_khoa": "Deep Learning Specialization",
+  "nen_tang": "Coursera",
+  "mo_ta_ngan": "Chuỗi 5 khóa học chuyên sâu về Học sâu (Deep Learning).",
+  "gia": 490000,
+  "thoi_luong": 180,
+  "danh_gia": 4.9,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Nâng cao",
+  "image_url": "/static/img/course19.png"
+},
+{
+  "_id": {
+    "$oid": "680c7a1e0b9d2f3c7e8e4a14"
+  },
+  "ten_khoa": "Mastering Tenses in English Grammar",
+  "nen_tang": "Udemy",
+  "mo_ta_ngan": "Khóa học chuyên sâu về thì trong ngữ pháp tiếng Anh.",
+  "gia": 149000,
+  "thoi_luong": 4,
+  "danh_gia": 4.4,
+  "chung_chi": true,
+  "ngon_ngu": "Tiếng Anh",
+  "do_kho": "Cơ bản",
+  "image_url": "/static/img/course20.png"
+}]

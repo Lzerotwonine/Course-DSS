@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AHP – Chọn Khóa học từ Database</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    /* 1. Lưới Khóa học */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    /* 2. Card chung */
+    .course-card { /* Đổi tên class */
+      display: flex;
+      flex-direction: column;
+    }
+    .course-card:hover { /* Đổi tên class */
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 3. Ảnh và tên */
+    .course-card .course-img { /* Đổi tên class */
+      width: 100%;
+      height: 120px;               /* Cố định chiều cao */
+      object-fit: cover;           /* Phủ kín khung, cắt những phần thừa */ 
+      display: block;
+    }
+    .course-card .course-title { /* Đổi tên class */
+      padding: 0.5rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+      white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+    .course-card .course-info { /* Đổi tên class */
+      padding: 0.5rem;
+      flex: 1;
+    }
+    
+    .card {
+      background: var(--box-light);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card.selected {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary-hover);
+    }
+    
+    .card.disabled {
+      background: #f0f0f0;
+      color: #888;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+    
+    .selected-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    
+    .selected-item {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.4rem 0.75rem;
+      border-radius: 20px;
+      margin: 0.25rem;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    
+    .selected-item .remove {
+      margin-left: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    
+    #pagination button {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+    
+    #pagination button:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .header-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    
+    #historySection input[type="number"] {
+      width: 80px;
+    }
+    .history-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.5rem 0 1rem;
+    }
+    
+    #historyLimit {
+      width: 80px;
+      padding: 0.3rem;
+      font-size: 1rem;
+    }
+    body.dark-mode {
+      --bg-light: #1e1e1e;
+      --text-light: #ccc;
+      --box-light: #2c2c2c;
+      --border-light: #444;
+      --accent: #3d8bfd;
+      --primary: #3d8bfd;
+      --primary-hover: #71aaff;
+      --text-dark: #fff;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+    
+    body.dark-mode input,
+    body.dark-mode select {
+      background: #333;
+      color: #eee;
+      border: 1px solid #555;
+    }
+    
+    #toggle-dark {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+      background: var(--box-light);
+      border: 1px solid var(--border-light);
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+    
+    #toggle-dark:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    
+    .course-card.selected { /* Đổi tên class */
+      opacity: 0.6;
+      border: 2px solid var(--primary);
+    }
+    
+    .input-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: baseline;    
+      margin-bottom: 1rem;
+    }
+
+    /* Chuẩn hoá input và select trong cùng một hàng */
+    .input-controls .input-group input,
+    .input-controls .input-group select {
+      /* cùng height để nằm cân hàng */
+      height: 2.5rem;
+      line-height: 2.5rem;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+    }
+
+    /* Label nằm ngang với input */
+    .input-controls .input-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .crit-card {
+      /* Cho phép xuống dòng bình thường */
+      white-space: normal;
+      /* Ngắt chữ khi tới cạnh, tránh tràn */
+      word-wrap: break-word;
+      /* Giới hạn cao đa dòng, ví dụ tối đa 3 dòng */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      /* Một chút padding để phần chữ không sát viền */
+      padding: 0.5rem;
+      /* Điều chỉnh line-height cho dễ đọc */
+      line-height: 1.2em;
+    }
+
+  </style>
+   <!-- Thư viện JS -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script>
+   <!--Dùng thư viện SheetJS-->
+   <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>   
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Chọn phương thức</a></li>
+      <li><a href="{{ url_for('manual') }}">Tính toán AHP thủ công</a></li>
+      <li><a href="{{ url_for('db_mode') }}"class="active">Tính toán AHP kết nối Database</a></li>
+      <!-- Loại bỏ AI-Mode -->
+    </ul>
+  </nav>
+
+  <!-- Nút Dark Mode -->
+  <button id="toggle-dark" onclick="toggleDarkMode()">🌙</button>
+
+  <!-- === 1. DB Panel: Chọn phương án & tiêu chí từ database === -->
+  <div id="dbPanel">
+  <div class="header-container">
+    <h2>Hệ hỗ trợ ra quyết định AHP – Chế độ Database</h2>
+  </div>
+
+  <!-- Tìm kiếm và lọc -->
+  <div class="input-controls">
+    <div class="input-group">
+      <label for="courseSearch">Tìm khóa học:</label>
+      <input id="courseSearch" placeholder="Nhập từ khóa..." /> <!-- Đổi tên ID -->
+    </div>
+    <!--Lọc theo phí-->
+    <div class="input-group">
+      <label for="priceMin">Phí từ (VND):</label>
+      <input id="priceMin" type="text" placeholder="Miễn phí/100000" min="0" step="100000" />
+    </div>
+    <div class="input-group">
+      <label for="priceMax">Phí đến (VND):</label>
+      <input id="priceMax" type="text" placeholder="10000000" min="0" step="100000" />
+    </div>
+    <!--Lọc theo ngôn ngữ (thay cho hãng)-->
+    <div class="input-group">
+      <label for="languageFilter">Lọc theo Ngôn ngữ:</label>
+      <select id="languageFilter"> <!-- Đổi tên ID -->
+        <!-- Options sẽ được thêm bằng JS -->
+      </select>
+    </div>
+  </div>
+
+
+  
+  <!-- Hiển thị Khóa học -->
+  <div id="coursesGrid" class="card-grid"></div> <!-- Đổi tên ID -->
+
+  <!-- Phân trang -->
+  <div class="action-center" id="pagination">
+    <button id="prevPage">← Trang trước</button>
+    <span id="pageInfo" style="margin: 0 1rem;">Trang 1</span>
+    <button id="nextPage">Trang sau →</button>
+  </div>
+
+  <!-- Khóa học đã chọn -->
+  <div>
+    <strong>Khóa học đã chọn:</strong>
+    <div id="selectedCourses" class="selected-list"></div> <!-- Đổi tên ID -->
+  </div>
+
+  <hr>
+
+  <!-- Tìm và chọn tiêu chí -->
+  <div class="input-controls">
+    <div class="input-group">
+      <label for="critSearch">Tìm tiêu chí:</label>
+      <input id="critSearch" placeholder="Nhập từ khóa tiêu chí..." />
+    </div>
+  </div>
+
+  <div id="criteriaGrid" class="card-grid"></div>
+
+  <div>
+    <strong>Tiêu chí đã chọn:</strong>
+    <div id="selectedCriteria" class="selected-list"></div>
+  </div>
+
+  <div class="action-center">
+    <button id="startDB" class="btn-primary">
+      Nhập ma trận đánh giá
+    </button>
+  </div>
+  </div>
+
+
+  <!-- === 2. AHP Panel: Tái sử dụng index.html (ẩn mặc định) === -->
+  <div id="ahpPanel" style="display:none; padding:1rem;">
+    <!-- Nội dung này do script.js sinh ra, chỉ cần đảm bảo script.js (db-mode.js) đã được sửa đổi tương ứng -->
+    <div id="namesContainer"></div>
+
+    <!-- Ma trận tiêu chí sẽ tự hiện, không cần nút thêm -->
+    <div id="criteriaMatrixContainer" style="margin-top:1rem;"></div>
+
+    <!-- Nút kiểm tra CR tiêu chí -->
+    <div id="crCheckBtnContainer" style="margin-top:1rem;">
+      <button class="btn-primary" onclick="db_checkCriteriaCR()">Kiểm tra CR tiêu chí</button>
+    </div>
+    <div id="crCheckResult"></div>
+
+    <div id="alternativeMatricesContainer" style="margin-top:1rem;"></div>
+
+    <!-- Nút kiểm tra CR phương án (ẩn theo mặc định) -->
+    <div id="altCRCheckBtnContainer" style="display:none; margin-top:1rem;">
+      <button class="btn-primary" onclick="db_checkAlternativeCR()">Kiểm tra CR phương án</button>
+    </div>
+    <div id="altCrCheckResult"></div>
+
+    <!-- Nút tính toán AHP (ẩn theo mặc định) -->
+    <div class="action-center">
+    <button id="calcBtn" class="btn-primary" style="display:none; margin-top:1rem;"
+    onclick="db_calculateAHP()">Tính toán AHP</button>
+    </div>
+
+    <div id="result" style="margin-top:2rem;"></div>
+
+    <!--Nút xuất file Excel / PDF-->
+    <div class="action-center">
+      <button id="exportExcelBtn" class="btn-primary" style="display:none;" onclick="downloadExcelBackend()">
+        ⬇ Xuất Excel
+      </button>
+      <button id="btnPDF" class="btn-primary" style="display:none;" onclick="exportServerPDF()">
+        ⬇ Xuất PDF
+      </button>
+    </div>
+
+  </div>
+
+
+  <!--Lịch sử và load-->
+  <section id="historySection" style="margin-top: 2rem; text-align: center;">
+  <h3>Lịch sử</h3>
+  <div class="history-controls">
+    <label for="startDate">Từ ngày:</label>
+    <input type="date" id="startDate" lang="vi" />    
+    <label for="endDate">Đến ngày:</label>
+    <input type="date" id="endDate" lang="vi" />
+
+
+    <label for="historyLimit">Số phiên:</label>
+    <input type="number" id="historyLimit" value="10" min="1" max="100" />
+
+    <button id="btnLoadHistory" class="btn-primary">Tải lịch sử</button>
+  </div>
+
+  <template id="history-item-template">
+    <div class="history-item">
+      <button class="dropdown-toggle">
+        <span class="timestamp"></span>
+        <span class="top1"></span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="dropdown-content"></div>
+    </div>
+    
+  </template>
+
+  <div id="historyList"></div>
+</section>
+
+  
+    <!-- Tooltip hiển thị chi tiết Khóa học -->
+    <div id="course-tooltip" style=" /* Đổi tên ID */
+    position: absolute;
+    display: none;
+    max-width: 280px;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    z-index: 1000;
+  "></div>
+  
+  
+
+
+ 
+  <!-- Điều phối DB → AHP -->
+  <!-- Lưu ý: Cần chỉnh sửa file db-mode.js và script.js tương ứng để các ID/Class mới hoạt động -->
+  <script src="/static/js/db-mode.js"></script> 
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
